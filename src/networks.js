@@ -20,7 +20,8 @@ module.exports = {
       4: 0x76b809bb
     },
     coin: coins.DEFAULT,
-    isZcash: true
+    isZcash: true,
+    version: 4
   },
   dash: {
     messagePrefix: '\x19DarkCoin Signed Message:\n',
@@ -31,7 +32,8 @@ module.exports = {
     pubKeyHash: 0x4c, // https://dash-docs.github.io/en/developer-reference#opcodes
     scriptHash: 0x10,
     wif: 0xcc,
-    coin: coins.DASH
+    coin: coins.DASH,
+    version: 1
   },
   dashTest: {
     messagePrefix: '\x19DarkCoin Signed Message:\n',
@@ -42,7 +44,8 @@ module.exports = {
     pubKeyHash: 0x8c, // https://dash-docs.github.io/en/developer-reference#opcodes
     scriptHash: 0x13,
     wif: 0xef, // https://github.com/dashpay/godashutil/blob/master/wif.go#L72
-    coin: coins.DASH
+    coin: coins.DASH,
+    version: 1
   },
   bch: {
     messagePrefix: '\x18Bitcoin Signed Message:\n',
@@ -55,7 +58,8 @@ module.exports = {
     scriptHash: 0x05,
     wif: 0x80,
     coin: coins.BCH,
-    forkId: 0x00
+    forkId: 0x00,
+    version: 1
   },
   bitcoincashTestnet: {
     messagePrefix: '\x18Bitcoin Signed Message:\n',
@@ -67,7 +71,8 @@ module.exports = {
     pubKeyHash: 0x6f,
     scriptHash: 0xc4,
     wif: 0xef,
-    coin: coins.BCH
+    coin: coins.BCH,
+    version: 1
   },
   zec: {
     messagePrefix: '\x18ZCash Signed Message:\n',
@@ -88,7 +93,8 @@ module.exports = {
       4: 0x76b809bb
     },
     coin: coins.ZEC,
-    isZcash: true
+    isZcash: true,
+    version: 4
   },
   zcashTest: {
     messagePrefix: '\x18ZCash Signed Message:\n',
@@ -107,7 +113,8 @@ module.exports = {
       4: 0x76b809bb
     },
     coin: coins.ZEC,
-    isZcash: true
+    isZcash: true,
+    version: 4
   },
   vrsc: {
     messagePrefix: '\x18Verus Coin Signed Message:\n',
@@ -126,7 +133,8 @@ module.exports = {
       4: 0x76b809bb
     },
     coin: coins.VRSC,
-    isZcash: true
+    isZcash: true,
+    version: 4
   },
   btg: {
     messagePrefix: '\x18Bitcoin Gold Signed Message:\n',
@@ -139,7 +147,8 @@ module.exports = {
     scriptHash: 0x17,
     wif: 0x80,
     coin: coins.BTG,
-    forkId: 0x4F /* 79 */
+    forkId: 0x4F /* 79 */,
+    version: 1
   },
   btc: {
     messagePrefix: '\x18Bitcoin Signed Message:\n',
@@ -151,7 +160,8 @@ module.exports = {
     pubKeyHash: 0x00,
     scriptHash: 0x05,
     wif: 0x80,
-    coin: coins.BTC
+    coin: coins.BTC,
+    version: 1
   },
   testnet: {
     messagePrefix: '\x18Bitcoin Signed Message:\n',
@@ -163,7 +173,8 @@ module.exports = {
     pubKeyHash: 0x6f,
     scriptHash: 0xc4,
     wif: 0xef,
-    coin: coins.BTC
+    coin: coins.BTC,
+    version: 1
   },
   ltc: {
     messagePrefix: '\x19Litecoin Signed Message:\n',
@@ -174,7 +185,8 @@ module.exports = {
     pubKeyHash: 0x30,
     scriptHash: 0x32,
     wif: 0xb0,
-    coin: coins.LTC
+    coin: coins.LTC,
+    version: 1
   },
   kmd: {
     messagePrefix: '\x18Komodo Signed Message:\n',
@@ -193,6 +205,7 @@ module.exports = {
       4: 0x76b809bb
     },
     coin: coins.KMD,
-    isZcash: true
+    isZcash: true,
+    version: 4
   },
 }
