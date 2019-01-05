@@ -653,7 +653,10 @@ TransactionBuilder.prototype.addInput = function (txHash, vout, sequence, prevOu
   // is it a hex string?
   if (typeof txHash === 'string') {
     // transaction hashs's are displayed in reverse order, un-reverse it
-    txHash = Buffer.from(txHash, 'hex').reverse()
+    // convert to array to reverse for react native compatibility
+    let _txHashReversed = ((txHash.split('')).reverse()).join('')
+
+    txHash = Buffer.from(_txHashReversed, 'hex')
 
   // is it a Transaction object?
   } else if (txHash instanceof Transaction) {
