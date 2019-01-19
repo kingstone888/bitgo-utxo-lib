@@ -654,7 +654,7 @@ TransactionBuilder.prototype.addInput = function (txHash, vout, sequence, prevOu
   if (typeof txHash === 'string') {
     // transaction hashs's are displayed in reverse order, un-reverse it
     // convert to array to reverse for react native compatibility
-    let _txHashReversed = ((txHash.split('')).reverse()).join('')
+    let _txHashReversed = ((txHash.match(/(..?)/g)).reverse()).join('')
 
     txHash = Buffer.from(_txHashReversed, 'hex')
 
