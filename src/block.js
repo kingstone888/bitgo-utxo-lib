@@ -5,7 +5,6 @@ var typeforce = require('typeforce')
 var types = require('./types')
 var varuint = require('varuint-bitcoin')
 var networks = require('./networks')
-var coins = require('./coins')
 
 var Transaction = require('./transaction')
 
