@@ -234,4 +234,44 @@ module.exports = {
     coin: coins.DGB,
     dustThreshold: 1000
   },
+  oot: {
+    messagePrefix: '\x18Utrum Signed Message:\n',
+    bech32: 'bc',
+    bip32: {
+      public: 0x0488b21e,
+      private: 0x0488ade4
+    },
+    pubKeyHash: 0x3c,
+    scriptHash: 0x55,
+    wif: 0xBC,
+    consensusBranchId: {
+      1: 0x00,
+      2: 0x00,
+      3: 0x5ba81b19,
+      4: 0x76b809bb
+    },
+    coin: coins.OOT,
+    isZcash: true,
+    version: 2
+  },
+  zilla: {
+    messagePrefix: '\x18ChainZilla Signed Message:\n',
+    bech32: 'bc',
+    bip32: {
+      public: 0x0488b21e,
+      private: 0x0488ade4
+    },
+    pubKeyHash: 0x3c,
+    scriptHash: 0x55,
+    wif: 0xBC,
+    consensusBranchId: {
+      1: 0x00,
+      2: 0x00,
+      3: 0x5ba81b19,
+      4: 0x76b809bb
+    },
+    coin: coins.ZILLA,
+    isZcash: true,
+    version: 2
+  },
 }
