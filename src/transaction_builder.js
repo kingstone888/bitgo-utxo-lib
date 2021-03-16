@@ -836,7 +836,6 @@ TransactionBuilder.prototype.sign = function (vin, keyPair, redeemScript, hashTy
     debug('Preparing input %d for signing', vin)
 
     if (!canSign(input)) prepareInput(input, kpPubKey, redeemScript, witnessValue, witnessScript)
-    console.log('input prepared')
     if (!canSign(input)) throw Error(input.prevOutType + ' not supported')
   }
 
