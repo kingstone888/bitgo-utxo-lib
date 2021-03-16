@@ -792,11 +792,8 @@ Transaction.prototype.getOutputsHash = function (hashType, inIndex) {
  * @param hashType
  * @returns double SHA-256 or 256-bit BLAKE2b hash
  */
-Transaction.prototype.hashForZcashSignature = function (inIndex, prevOutScript, value, hashType) {
-  console.log('Hash for zcash signature initialized')
-  
+Transaction.prototype.hashForZcashSignature = function (inIndex, prevOutScript, value, hashType) {  
   typeforce(types.tuple(types.UInt32, types.Buffer, types.Satoshi, types.UInt32), arguments)
-  console.log('Typeforce completed')
   if (!coins.isZcash(this.network)) {
     throw new Error('hashForZcashSignature can only be called when using Zcash or Verus network')
   }
@@ -807,7 +804,6 @@ Transaction.prototype.hashForZcashSignature = function (inIndex, prevOutScript, 
     throw new Error('Input index is out of range')
   }
 
-  console.log('checking overwinter compatibility')
   if (this.isOverwinterCompatible()) {
     var hashPrevouts = this.getPrevoutHash(hashType)
     var hashSequence = this.getSequenceHash(hashType)
@@ -815,7 +811,6 @@ Transaction.prototype.hashForZcashSignature = function (inIndex, prevOutScript, 
     var hashJoinSplits = ZERO
     var hashShieldedSpends = ZERO
     var hashShieldedOutputs = ZERO
-    console.log('hashes evaluated')
 
     var bufferWriter
     var baseBufferSize = 0
@@ -873,7 +868,6 @@ Transaction.prototype.hashForZcashSignature = function (inIndex, prevOutScript, 
   }
   else
   {
-    console.log('not overwinter compatible')
     return this.hashForSignature(inIndex, prevOutScript, hashType);
   }
 }
