@@ -90,7 +90,7 @@ module.exports = {
       1: 0x00,
       2: 0x00,
       3: 0x5ba81b19,
-      4: 0xE9FF75A6
+      4: 0xc2d6d0b4
     },
     coin: coins.ZEC,
     isZcash: true,
